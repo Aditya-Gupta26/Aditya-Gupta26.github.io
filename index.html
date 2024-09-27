@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg" href="static/logo.png">
+    <title>Aditya Gupta</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+    <!-- Link the CSS file correctly from the static folder -->
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#home" id="header-button">
+            <img src="static/logo3.png" alt="Home Button" id="header-button-image"/>
+        </a>
+        <div class="menu-button" onclick="toggleDropdown()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div id="dropdown-menu" class="dropdown">
+            <a href="#exp">Experience</a>
+            <a href="#pub">Publications</a>
+            <a href="#int">Internships</a>
+            <a href="#pro">Projects</a>
+            <a href="#cv">CV</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Upper Div -->
+        <div class="upper-div", id = "home">
+            <img src="static/mbrdi2.png" alt="Landscape" class="landscape-img">
+        </div>
+
+        <!-- Circular Image in between -->
+        <div class="profile-pic">
+            <img src="static/me.png" alt="Your Photo">
+        </div>
+
+        <!-- Lower Div -->
+        <div class="lower-div">
+            <h2>Aditya Gupta</h2>
+            <h3>Mercedes-Benz Research & Development India</h3>
+            <p>Hi! Aditya here. <br><br> I am an avid learner, a passionate researcher and a philomath. I have deep passion for AI/ML, data structures, mathematical optimizations and love to explore their novel use-cases. I work at Mercedes-Benz as a Research Engineer where my work is focused on the Intelligent cruise control (ICC) applications in an automobile. I've graduated from IIT Bombay with a major degree in Mechanical Engineering and a minor degree in Computer Science and Engineering. I have been fortunate to work under the wing of notable professors at IIT Bombay as an undergraduate researcher which has nurtured my interest into research-work. My internships at financial firms has allowed me to understand the significance of efficient algorithms and their eventual impact. <br><br> In my free time, one might catch me swaying to the rhythmic beats of soulful music or grilling out in the gym. <br><br> There is always a lot of scope to learn and implement our knowledge, and I am always focused towards delivering the best quality product. </p>
+            
+        </div>
+
+        <div class="expe" id="exp"> <!-- Internship Section -->
+            
+            <div class = "par-div">
+                <h2> Work Experience</h2>
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/mbrdi3.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Mercedes-Benz Research and Development</h2>
+                        <h3>Research Engineer</h3>
+                        <h4>Present</h4>
+                        <p>To be added</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class = "par-div">
+                <h2> Research Experience</h2>
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/swiftnav.png" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>SwiftNav: A probabilistic global optimizer</h2>
+                        <h3><a href = "https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html" style="color: yellow; text-decoration: none;">Prof. Debasish Chatterjee</a> | Department of Systems and Controls Engineering, IIT Bombay</h3>
+                        <p>Created a novel global optimization algorithm (SwiftNav) based on probabilistic Markov-chain Monte Carlo (MCMC) samplers. It aims at obtaining the global minima for a given function over a compact domain. We utilized the Walker-Slice sampler and implemented Gibbs sampling for robust high-dimensional computations. Further, the search space for any function over the compact domain was discretized dynamically -- meaning that the grid could be refined or made coarser on the fly. Lastly, parallel processing was employed to make high-dimensional optimizations quick. </p>
+                        <button class = "styled-button">Paper</button>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/clf.png" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Algorithmic construction of Controlled Lyapunov functions (CLF)</h2>
+                        <h3><a href = "https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html" style="color: yellow; text-decoration: none;">Prof. Debasish Chatterjee</a>  | Department of Systems and Controls Engineering, IIT Bombay</h3>
+                        <p>We utilized a computationally tractable algorithm (MSA Algorithm), coupled with SwiftNav which allowed us to algorithmically construct CLFs. CLFs are an important centerpiece in control engineering and in the field of Machine Learning. It can be used for multiple use-cases spanning across a diverse field like Spacecraft attitude control, Epidemic mitigation, Catalyst control, and even for biochemical reactions. We have examined these applications in detail. A bunch of polynomial and trigonometric functions were used to define the posible CLFs over the discrete space and the results were validated against the constraints specified.</p>
+                        <button class = "styled-button">Paper</button>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/drugprotai.png" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>DrugProtAI: Protein druggability predictor</h2>
+                        <h3><a href = "https://scholar.google.co.in/citations?user=CUzQFQQAAAAJ&hl=en" style="color: yellow; text-decoration: none;">Prof. Sanjeeva Srivastava</a> | Department of Biosciences and Bioengineering, IIT Bombay</h3>
+                        <p>We developed a comprehensive tool used to evaluate the druggability potential of 20000+ human proteins. We introduced a novel Partition Ensemble Classifier (PEC), running multiple ML models that analyse 183 biophysical and protein sequence-specific properties. Our <a href = "https://drugprotai.pythonanywhere.com/" style="color: yellow; text-decoration: none;">website</a> acts like a knowledgebase, offering druggabilty predictions and access to 2M+ publications on drug targets along with multiple additional features.</p>
+                        <button class = "styled-button">Paper</button>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/covprot.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>CovProt: Mass spectrometry based pretomics data resource</h2>
+                        <h3><a href = "https://scholar.google.co.in/citations?user=CUzQFQQAAAAJ&hl=en" style="color: yellow; text-decoration: none;">Prof. Sanjeeva Srivastava</a> | Department of Biosciences and Bioengineering, IIT Bombay</h3>
+                        <p>I was a part of the team that developed a comprehensive resourcebank hostig proteomics data of SARS-CoV-2 infected patients to facilitate COVID-19 research. We conducted research on the proteomics data in various organs of COVID infected patients and studied their variation. The <a href = "https://covprot.org/" style="color: yellow; text-decoration: none;">website</a> aims at providing substantial coverage of host-related proteomics data of SARS-CoV-2. </p>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/sphere.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Optimal sphere packing in higher dimensions</h2>
+                        <h3><a href = "https://www.ieor.iitb.ac.in/files/faculty/abhardwaj/index.html#" style="color: yellow; text-decoration: none;">Prof. Avinash Bhardwaj</a> | Department of Industrial and Operations Research, IIT Bombay</h3>
+                        <p>As part of my BTP, I Conducted research on mathematical models formulating spheres as d-dimensional lattices to maximize packing density. We examined the Monte-Carlo approach, along with the <a href = "https://arxiv.org/abs/1008.2747" style="color: yellow; text-decoration: none;">TJ</a> and <a href = "https://en.wikipedia.org/wiki/Lubachevsky%E2%80%93Stillinger_algorithm" style="color: yellow; text-decoration: none;">LS</a> algorithms. This problem is of interest in cryptosystems and finds multiple applications in computational mathematics. </p>
+                        <button class="styled-button" onclick="window.open('https://docs.google.com/presentation/d/1NKdkOeSVIsvDtxAWK47U6K-9n5tbyjFA/edit?usp=sharing&ouid=110385763100095062741&rtpof=true&sd=true', '_blank');">
+                            Presentation
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="publ" id="pub"> <!-- Experience Section -->
+            <h2>Publications</h2>
+            <div class = "par-div">
+                <div class="outer-div2">
+                    
+                        <h3>On a probabilistic global optimizer derived from the Walker slice sampling</h3>
+                        <p><strong>Aditya Gupta</strong>, Souvik Das, and Debasish Chatterjee</p>
+                        <button class = "styled-button">ArXiv</button>
+                </div>
+
+                <div class="outer-div2">
+                    
+                    <h3>On the algorithmic construction of control Lyapunov functions for continuous control systems</h3>
+                    <p><strong>Aditya Gupta</strong>, Souvik Das, and Debasish Chatterjee</p>
+                    <button class = "styled-button">ArXiv</button>
+                    
+                </div>
+
+                <div class="outer-div2">
+                    
+                    <h3>DrugProtAI: A guide to the future research of investigational target proteins</h3>
+                    <p>Ankit Halder*, Sabyasachi Samantarey, Sahil Barbade, <strong>Aditya Gupta</strong>, and Sanjeeva Srivastava</p>
+                    <button class = "styled-button">BioArXiv</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="inte" id="int"> <!-- Publications Section -->
+            <h2>Internships</h2>
+            <div class = "par-div">
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/amex.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>American Express</h2>
+                        <h3>Machine Learning Internship</h3>
+                        <h4>May 2023 - July 2023</h4>
+                        <p>I worked with the Credit and Fraud Risk (CFR) division at American Express India on Market Mix modelling (MMM). My work involved developing novel mathematical functions to tune hyperparameters using global optimization routines for over 120 variables. I created a cutom pipeline utilizing a combination of S-Curve and C-Curve transformation in order to achieve optimal results.</p>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/obs.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Opulence Business Solutions</h2>
+                        <h3>Financial Analytics Internship</h3>
+                        <h4>May 2022 - July 2022</h4>
+                        <p>
+                            I conducted research and synthesized data to provide strategic insights and recommendations for a diverse range of clients. My work involved advising investors on funding opportunities for potential startups and MSMEs, while also facilitating the establishment of business relationships between enterprises and global investors. This allowed me to offer valuable recommendations that bridged gaps between businesses and investors on a global scale.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="proj" id="pro"> <!-- Projects Section -->
+            <div class = "par-div">
+                <h2> Projects</h2>
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/rt.jpeg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Adyant: IITB Rocket Team</h2>
+                        <h3><a href = "https://www.me.iitb.ac.in/faculty/prof-neeraj-kumbhakarna" style="color: yellow; text-decoration: none;">Prof. Neeraj Kumbhaarna</a> | Department of Mechanical Engineering, IIT Bombay</h3>
+                        <h3><a href = "https://www.aero.iitb.ac.in/home/people/faculty/nagendra" style="color: yellow; text-decoration: none;">Prof. Nagendra Kumar</a> | Department of Aerospace Engineering, IIT Bombay</h3>
+                        <h4>June 2021 - May 2024</h4>
+                        <p>Worked as a design engineer in the airframe subsystem of a student tech team that builds sounding rockets (10k feet). We ideated, conceptualized and manufactured rocket parts made of GFRP, Carbon-Fibre and ran several tests using ANSYS, SolidWorks simulating flight performance. I also worked in the design and creation of the team's website. I was selected as part of <a href = "https://iitbrocketteam.in/" style="color: yellow; text-decoration: none;">IITB Rocket Team's</a> first contingent representing India at the <a href = "https://spaceportamericacup.com/" style="color: yellow; text-decoration: none;">Spaceport America Cup 2023</a>(SA Cup | NM, USA). Our Rocket - Adyant achieved nominal liftoff, chute ejection and recovery which helped us bag 1st position nationally and 66th position internationally out of 150+ teams in the competition.  </p>
+                        
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/travopt.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Optimization of Public Transport Selection</h2>
+                        <h3><a href = "https://www.ieor.iitb.ac.in/files/faculty/abhardwaj/index.html#" style="color: yellow; text-decoration: none;">Prof. Avinash Bhardwaj</a> | Department of Industrial and Operations Research, IIT Bombay</h3>
+                        <h4>January 2023 - May 2023</h4>
+                        <p>We aimed at optimizing travel in a tranposrtation network consisting of multiple means of transport. We analyzed the city of Mumbai and developed algorithms to optimize travel based on user choice (time efficient, cost efficient, comfort etc.) with 4 transport modes (Metro, Local trains, Bus service, Rickshaws). We employed linear programming for a deterministic case. Later, we added a stochastic model based on Reinforcement Learning and reformulated the problem as an MDP. Lastly, we used NSGA-II genetic algorithm to solve the optimal route problem.</p>
+                        <button class="styled-button" onclick="window.open('https://drive.google.com/file/d/1EVFKHjt9yr1wmeOcsbGK2ySje0c7orKv/view?usp=sharing', '_blank');">
+                            Presentation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/dh.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Segmentation of Abdominal Organs</h2>
+                        <h3><a href = "https://www.cse.iitb.ac.in/~ganesh/" style="color: yellow; text-decoration: none;">Prof. Ganesh Ramakrishnan</a> | Department of Computer Science and Engineering, IIT Bombay</h3>
+                        <h3><a href = "https://www.koitafoundation.org/DHFC/Viewtext/34A85889-49C3-419F-9217-87A0C8B02637" style="color: yellow; text-decoration: none;">Prof. Kshitij Jafhav</a> | Koita Centre for Digital Health, IIT Bombay</h3>
+                        <h4>January 2024 - May 2024</h4>
+                        <p>We implemented Meta's Segment Anything Model (<a href = "https://segment-anything.com/" style="color: yellow; text-decoration: none;">SAM</a>) -- modified to segment medical images (SAMed) with LORA loss function. For this purpose, I trained the model on <a href = "https://paperswithcode.com/dataset/chaos" style="color: yellow; text-decoration: none;">CHAOS</a> dataset containing CT scan based 3D DICOM images and applied multiple pre-processing routines to establish compatibility, obtaining nomial results for Liver, Kidney (left and right) and spleen segmentation.</p>
+                        <button class="styled-button" onclick="window.open('https://drive.google.com/file/d/1T4DlvhQNUr9qo22DDy9ocDdbYeKijFY0/view?usp=sharing','_blank');">
+                            Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="outer-div">
+                    <div class="inner-div left-div">
+                        <img src="static/macdes.jpg" alt="Landscape" class="landscape-img">
+                    </div>
+                    <div class="inner-div right-div">
+                        <h2>Flexibile and Extendable 2D Manipulator</h2>
+                        <h3><a href = "https://www.me.iitb.ac.in/~ramesh/" style="color: yellow; text-decoration: none;">Prof. Ramesh Singh</a> | Department of Mechanical Engineering, IIT Bombay</h3>
+                        <h4>September 2023 - Decemeber 2023</h4>
+                        <p>We built a near-continuum soft robotic arm designed to bend at various radii of curvature along its length, offering adaptability to navigate complex scenarios. It can be used for maintenance, in healthcare and for search and rescue. We also developed a wireless remote working on Wi-Fi principle to control the essential robotic arm movements wirelessly. </p>
+                        <button class="styled-button" onclick="window.open('https://drive.google.com/file/d/187WlPqSt6weud_iZdxys4yK8IgA5XXq5/view?usp=sharing','_blank');">
+                            Report
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ceevee" id="cv"> <!-- CV Section -->
+            <h2>CV</h2>
+            <object data="static/CV.pdf" type="application/pdf" width="100%" height="600px">
+                <p>Your browser does not support PDFs. <a href="static/CV.pdf">Download the PDF</a>.</p>
+            </object>
+        </div>
+
+        
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <a href="https://www.linkedin.com/in/aditya-gupta-332706221/" target="_blank" style = "text-decoration: none;">
+            <img src="static/linkedin-logo.png" alt="LinkedIn" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
+        </a>
+        <a href="https://github.com/Aditya-Gupta26" target="_blank" style = "text-decoration: none;">
+            <img src="static/github-logo.png" alt="GitHub" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
+        </a>
+        <a href="mailto:adigupta2602@gmail.com" target="_blank" style = "text-decoration: none;">
+            <img src="static/mail-logo.png" alt="Gmail" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
+        </a>
+    </footer>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>

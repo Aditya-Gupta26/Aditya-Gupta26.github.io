@@ -1,0 +1,395 @@
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: scroll; /* Enable scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;     /* Align items vertically */
+    text-align: center;
+}
+
+/* Main Section */
+main {
+    
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.menu-button {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    
+    right: 20px;
+}
+
+.menu-button .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #333;
+    width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0; /* Start with an opacity of 0 for fade effect */
+    transition: opacity 1s ease; /* Transition effect */
+    pointer-events: none;
+}
+
+.dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown a:hover {
+    background-color: #575757;
+}
+
+/* Show the dropdown when active */
+.dropdown.show {
+    
+    opacity: 1; /* Fade in */
+    
+    pointer-events: auto;
+}
+.dropdown.hide {
+    opacity: 0; /* Fade out */
+    pointer-events: none;
+}
+
+
+/* Upper Div */
+.upper-div {
+    width: 100%;
+    height: 40vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.landscape-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Profile Picture */
+.profile-pic {
+    position: absolute;
+    top: calc(27.5vh); /* Adjust the height so it's centered between upper and lower div */
+    left: 50%;
+    transform: translateX(-50%);
+    width:25vh;
+    height: 25vh;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    z-index: 1;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lower Div */
+.lower-div {
+    width: 100%;
+    height: fit-content;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 20px;
+    padding-top: 15vh;
+    overflow: hidden;
+}
+
+.lower-div p {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: #333;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.expe {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 20px;
+    
+    overflow: hidden;
+}
+
+.publ {
+    width: 100%;
+    height: fit-content;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 20px;
+    
+    overflow: hidden;
+}
+
+.inte {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 20px;
+    
+    overflow: hidden;
+}
+
+.proj {
+    width: 100%;
+    height: fit-content;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 20px;
+    
+    overflow: hidden;
+}
+
+.ceevee {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding-top: 20px;
+    
+    overflow: hidden;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    height: 57.2px;
+}
+
+.par-div{
+    display: flex;
+    flex-direction: column;
+    height: fit-content; /* Full height of the viewport */
+    width: 100%;
+    align-items: center;
+}
+
+.outer-div {
+    display: flex;
+    flex-direction: row;
+    height: fit-content; /* Full height of the viewport */
+    width: 100%;
+    padding: 10px;
+}
+.outer-div2 {
+    display: flex;
+    flex-direction: column;
+    height: fit-content; /* Full height of the viewport */
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    align-items: center;
+    
+}
+
+
+.outer-div2 p{
+    color: white;
+}
+
+.outer-div2 h3{
+    color: white;
+}
+
+/* Left and right inner divs */
+.inner-div {
+    display: flex;
+   
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.left-div {
+    background-color: #e2e2e2;
+    width: 30%; /* 30% width for the left div */
+    padding:0px;
+}
+
+.right-div {
+    background-color: black;
+    width: 70%; /* 70% width for the right div */
+    display: flex;
+    flex-direction: column;
+    
+}
+.mid div{
+        color: black;
+        background-color: black;
+        width: 70%; /* 70% width for the right div */
+        display: flex;
+        flex-direction: column;
+}
+.right-div h2{
+    margin-top: 30px;
+    color: white;
+}
+.right-div h3{
+    
+    color: white;
+}
+.right-div h4{
+    
+    color: white;
+}
+.right-div p{
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#header-button-image {
+    height: 40px; /* Adjust the size of the image as needed */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    padding-left: 20px;
+}
+
+#header-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes underline from the link */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.styled-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .styled-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+  }
+
+  .styled-button:focus {
+    outline: none; /* Remove focus outline */
+  }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    
+
+    .lower-div p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .dropdown {
+        position: fixed; /* Change position to fixed */
+        top: 0; /* Align to the top of the screen */
+        left: 0; /* Align to the left of the screen */
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        top: 0; /* Align to the top of the screen */
+        padding-top: 60px; /* Add padding to avoid the header */
+        z-index: 999; /* Ensure it appears above other content */
+        
+    }
+
+    .dropdown a {
+        text-align: center; /* Center text in the dropdown */
+        padding: 15px; /* Add some padding for touch targets */
+        border-bottom: 1px solid #575757; /* Optional: add a border for separation */
+    }
+
+    .outer-div {
+        flex-direction: column; /* Change to column layout */
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .left-div, .right-div {
+        width: 100%;  /* Full width for both divs */
+        height: fit-content; /* Each takes 50% of height */
+    }
+}
