@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg" href="static/logo.png">
+    <title>Aditya Gupta</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+    <!-- Link the CSS file correctly from the static folder -->
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#home" id="header-button">
+            <img src="static/logo3.png" alt="Home Button" id="header-button-image"/>
+        </a>
+        <div class="menu-button" onclick="toggleDropdown()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div id="dropdown-menu" class="dropdown">
+            <a href="#exp">Experience</a>
+            <a href="#pub">Publications</a>
+            <a href="#int">Internships</a>
+            <a href="#pro">Projects</a>
+            <a href="#cv">CV</a>
+        </div>
+    </header>
+
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <a href="https://www.linkedin.com/in/aditya-gupta-332706221/" target="_blank" style = "text-decoration: none;">
+            <img src="static/linkedin-logo.png" alt="LinkedIn" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
+        </a>
+        <a href="https://github.com/Aditya-Gupta26" target="_blank" style = "text-decoration: none;">
+            <img src="static/github-logo.png" alt="GitHub" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
+        </a>
+        <a href="mailto:adigupta2602@gmail.com" target="_blank" style = "text-decoration: none;">
+            <img src="static/mail-logo.png" alt="Gmail" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
+        </a>
+    </footer>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>
