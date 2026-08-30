@@ -1,0 +1,35 @@
+{
+  "publications": [
+    {
+      "title": "On a probabilistic global optimizer derived from the Walker slice sampling",
+      "authors": ["Aditya Gupta", "Souvik Das", "Debasish Chatterjee"],
+      "venue": "Under review, IEEE Transactions on Systems Engineering",
+      "thumbnail": "images/swiftnav.png",
+      "award": "",
+      "selected": 1,
+      "links": {
+        "pdf": "https://arxiv.org/abs/2411.03851"
+      }
+    },
+    {
+      "title": "DrugProtAI: A guide to the future research of investigational target proteins",
+      "authors": ["Ankit Halder", "Sabyasachi Samantarey", "Sahil Barbade", "Aditya Gupta", "Sanjeeva Srivastava"],
+      "venue": "Briefings in Bioinformatics, Oxford Academic",
+      "thumbnail": "images/drugprotai.png",
+      "award": "",
+      "selected": 1,
+      "links": {
+        "pdf": "https://doi.org/10.1093/bib/bbaf330"
+      }
+    },
+    {
+      "title": "On the algorithmic construction of control Lyapunov functions for continuous control systems",
+      "authors": ["Aditya Gupta", "Souvik Das", "Debasish Chatterjee"],
+      "venue": "In preparation",
+      "thumbnail": "images/clf.png",
+      "award": "",
+      "selected": 0,
+      "links": {}
+    }
+  ]
+}

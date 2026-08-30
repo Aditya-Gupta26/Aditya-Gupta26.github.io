@@ -3,294 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/svg" href="static/logo.png">
+    <meta name="description" content="Aditya Gupta — Personal Website">
+    <meta name="keywords" content="Aditya Gupta, NYU, Computer Engineering, Machine Learning, Reinforcement Learning, Robotics">
+    <meta name="author" content="Aditya Gupta">
+    <meta property="og:title" content="Aditya Gupta">
+    <meta property="og:description" content="MS Computer Engineering @ NYU. Research Assistant, EMERGE Lab.">
+    <meta property="og:type" content="website">
     <title>Aditya Gupta</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
-    <!-- Link the CSS file correctly from the static folder -->
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-    <!-- Header Section -->
+<body id="top">
     <header>
-        <a href="#home" id="header-button">
-            <img src="static/logo3.png" alt="Home Button" id="header-button-image"/>
-        </a>
-        <div class="menu-button" onclick="toggleDropdown()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="header-content">
+            <h1>Aditya Gupta</h1>
+            <p>MS Computer Engineering, New York University &bull; Research Assistant, EMERGE Lab</p>
+            <div class="social-links-header">
+                <a href="https://github.com/Aditya-Gupta26"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/aditya-gupta-332706221/"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="mailto:ag11023@nyu.edu"><i class="fas fa-envelope"></i>Email</a>
+                <a href="docs/resume.pdf"><i class="fas fa-file"></i>Resume</a>
+            </div>
         </div>
-
-        <!-- Dropdown Menu -->
-        <div id="dropdown-menu" class="dropdown">
-            <a href="#exp">Experience</a>
-            <a href="#pub">Publications</a>
-            <a href="#int">Internships</a>
-            <a href="#pro">Projects</a>
-            <a href="#cv">CV</a>
+        <div class="header-image">
+            <img src="images/profile.png" alt="Profile Photo">
         </div>
     </header>
 
-    <!-- Main Content Section -->
     <main>
-        <!-- Upper Div -->
-        <div class="upper-div", id = "home">
-            <img src="static/mbrdi2.png" alt="Landscape" class="landscape-img">
-        </div>
+        <section id="about">
+            <p>Hi! I'm a graduate student in Computer Engineering at NYU, where I work as a Research Assistant at the <a href="https://www.emergelab.org/">EMERGE Lab</a>, advised by Professor <a href="https://www.eugenevinitsky.com/">Eugene Vinitsky</a>, on reinforcement learning for autonomous driving. Before NYU, I spent close to a year as a Software Development Engineer at Mercedes-Benz R&amp;D, and interned at C3.ai and American Express. I graduated from IIT Bombay with a degree in Mechanical Engineering and a minor in Computer Science, where I did undergraduate research in optimization, controls, and computational biology under several professors.</p>
+            <p>Outside of work, I enjoy music and lifting.</p>
+        </section>
 
-        <!-- Circular Image in between -->
-        <div class="profile-pic">
-            <img src="static/me.png" alt="Your Photo">
-        </div>
+        <section id="research">
+            <h2>Research</h2>
+            <p>My research interests span reinforcement learning, autonomous driving, optimization, and applied machine learning systems.</p>
+        </section>
 
-        <!-- Lower Div -->
-        <div class="lower-div">
-            <h2>Aditya Gupta</h2>
-            <h3><a href = "https://www.mbrdi.co.in/#/" style="color: grey; text-decoration: none;">Mercedes-Benz Research & Development India</a></h3>
-            <p>Hi! Aditya here. <br><br> I am an avid learner, a passionate researcher and a philomath. I have deep passion for AI/ML, data structures, mathematical optimizations and love to explore their novel use-cases. I work at Mercedes-Benz as a Research Engineer where my work is focused on the reshaping the V2P architectural framework of Mercedes vehicles. I've graduated from IIT Bombay with a major degree in Mechanical Engineering and a minor degree in Computer Science and Engineering. I have been fortunate to work under the wing of notable professors at IIT Bombay as an undergraduate researcher which has nurtured my interest into research-work. My internships at financial firms has allowed me to understand the significance of efficient algorithms and their eventual impact. <br><br> In my free time, one might catch me swaying to the rhythmic beats of soulful music or grilling out in the gym. <br><br> There is always a lot of scope to learn and implement our knowledge, and I am always focused towards delivering the best quality product. </p>
-            
-        </div>
+        <section id="current-research">
+            <h2>Current Research</h2>
 
-        <div class="expe" id="exp"> <!-- Internship Section -->
-            
-            <div class = "par-div">
-                <h2> Work Experience</h2>
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/mbrdi3.jpg" alt="Landscape" class="landscape-img">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">RL-based Planning Agents for Autonomous Vehicles</span>
+                        <span class="timeline-date">Sept 2025 &ndash; Present</span>
                     </div>
-                    <div class="inner-div right-div">
-                        <h2>Mercedes-Benz Research and Development</h2>
-                        <h3>Research Engineer</h3>
-                        <h4>Present</h4>
-                        <p>I am working on developing novel V2P commmunication architectures between Mercedes vehicles and mobile application. We are currently inetgrating the Cat-M1 and MQTTv5 technologies into our proposed plan of action. As part of this development, I have been researching on latest technolgies, and current architecture style used around. As this is an end-to-end task, we are also looking at the deployment of this technology using cloud-based microservices, primarily hosted over Azure and developed using Java (Spring). Lastly, as part of the next-gen Mercedes vehicles, I am working on the development of a low-cost, P2P communication method between the vehicle and the Mercedes-Me app (on mobile phone) via BLE and UWB. </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class = "par-div">
-                <h2> Research Experience</h2>
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/swiftnav.png" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>SwiftNav: A probabilistic global optimizer</h2>
-                        <h3><a href = "https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html" style="color: yellow; text-decoration: none;">Prof. Debasish Chatterjee</a> | Department of Systems and Controls Engineering, IIT Bombay</h3>
-                        <p>Created a novel global optimization algorithm (SwiftNav) based on probabilistic Markov-chain Monte Carlo (MCMC) samplers. It aims at obtaining the global minima for a given function over a compact domain. We utilized the Walker-Slice sampler and implemented Gibbs sampling for robust high-dimensional computations. Further, the search space for any function over the compact domain was discretized dynamically -- meaning that the grid could be refined or made coarser on the fly. Lastly, parallel processing was employed to make high-dimensional optimizations quick. </p>
-                        <button class = "styled-button" onclick="window.open('https://arxiv.org/abs/2411.03851', '_blank');">Paper</button>
-                    </div>
-                </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/clf.png" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>Algorithmic construction of Controlled Lyapunov functions (CLF)</h2>
-                        <h3><a href = "https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html" style="color: yellow; text-decoration: none;">Prof. Debasish Chatterjee</a>  | Department of Systems and Controls Engineering, IIT Bombay</h3>
-                        <p>We utilized a computationally tractable algorithm (MSA Algorithm), coupled with SwiftNav which allowed us to algorithmically construct CLFs. CLFs are an important centerpiece in control engineering and in the field of Machine Learning. It can be used for multiple use-cases spanning across a diverse field like Spacecraft attitude control, Epidemic mitigation, Catalyst control, and even for biochemical reactions. We have examined these applications in detail. A bunch of polynomial and trigonometric functions were used to define the posible CLFs over the discrete space and the results were validated against the constraints specified.</p>
-                        <!--<button class = "styled-button">Paper</button>-->
-                    </div>
-                </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/drugprotai.png" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>DrugProtAI: Protein druggability predictor</h2>
-                        <h3><a href = "https://scholar.google.co.in/citations?user=CUzQFQQAAAAJ&hl=en" style="color: yellow; text-decoration: none;">Prof. Sanjeeva Srivastava</a> | Department of Biosciences and Bioengineering, IIT Bombay</h3>
-                        <p>We developed a comprehensive tool used to evaluate the druggability potential of 20000+ human proteins. We introduced a novel Partition Ensemble Classifier (PEC), running multiple ML models that analyse 183 biophysical and protein sequence-specific properties. Our <a href = "https://drugprotai.pythonanywhere.com/" style="color: yellow; text-decoration: none;">website</a> acts like a knowledgebase, offering druggabilty predictions and access to 2M+ publications on drug targets along with multiple additional features.</p>
-                        <button class = "styled-button" onclick="window.open('https://www.biorxiv.org/content/10.1101/2024.11.05.622045v1', '_blank');">Paper</button>
-                    </div>
-                </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/covprot.JPG" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>CovProt: Mass spectrometry based pretomics data resource</h2>
-                        <h3><a href = "https://scholar.google.co.in/citations?user=CUzQFQQAAAAJ&hl=en" style="color: yellow; text-decoration: none;">Prof. Sanjeeva Srivastava</a> | Department of Biosciences and Bioengineering, IIT Bombay</h3>
-                        <p>I was a part of the team that developed a comprehensive resourcebank hostig proteomics data of SARS-CoV-2 infected patients to facilitate COVID-19 research. We conducted research on the proteomics data in various organs of COVID infected patients and studied their variation. The <a href = "https://covprot.org/" style="color: yellow; text-decoration: none;">website</a> aims at providing substantial coverage of host-related proteomics data of SARS-CoV-2. </p>
-                    </div>
-                </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/sphere.jpg" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>Optimal sphere packing in higher dimensions</h2>
-                        <h3><a href = "https://www.ieor.iitb.ac.in/files/faculty/abhardwaj/index.html#" style="color: yellow; text-decoration: none;">Prof. Avinash Bhardwaj</a> | Department of Industrial and Operations Research, IIT Bombay</h3>
-                        <p>As part of my BTP, I Conducted research on mathematical models formulating spheres as d-dimensional lattices to maximize packing density. We examined the Monte-Carlo approach, along with the <a href = "https://arxiv.org/abs/1008.2747" style="color: yellow; text-decoration: none;">TJ</a> and <a href = "https://en.wikipedia.org/wiki/Lubachevsky%E2%80%93Stillinger_algorithm" style="color: yellow; text-decoration: none;">LS</a> algorithms. This problem is of interest in cryptosystems and finds multiple applications in computational mathematics. </p>
-                        <button class="styled-button" onclick="window.open('https://docs.google.com/presentation/d/1NKdkOeSVIsvDtxAWK47U6K-9n5tbyjFA/edit?usp=sharing&ouid=110385763100095062741&rtpof=true&sd=true', '_blank');">
-                            Presentation
-                        </button>
-                        
-                    </div>
+                    <div class="timeline-subtitle"><a href="https://www.emergelab.org/">EMERGE Lab</a> &bull; Advisor: Prof. <a href="https://www.eugenevinitsky.com/">Eugene Vinitsky</a> &bull; Research Assistant</div>
+                    <ul>
+                        <li>Working on PPO-based, LSTM-augmented self-play algorithms to learn robust and generalizable driving policies</li>
+                        <li>Contributing to the development of <a href="https://github.com/Emerge-Lab/PufferDrive">PufferDrive</a>, a driving simulator, adding features and scaling execution over 200k SPS</li>
+                        <li>Core member for the development and public release of <a href="https://emerge-lab.github.io/PufferDrive/pufferdrive-2.0.html">PufferDrive 2.0</a>, a scalable autonomous driving simulator</li>
+                    </ul>
                 </div>
             </div>
-            
-        </div>
+        </section>
 
-        <div class="publ" id="pub"> <!-- Experience Section -->
-            <h2>Publications</h2>
-            <div class = "par-div">
-                <div class="outer-div2">
-                    
-                        <h3>On a probabilistic global optimizer derived from the Walker slice sampling</h3>
-                        <p><strong>Aditya Gupta</strong>, Souvik Das, and Debasish Chatterjee</p>
-                        <! -- <button class = "styled-button">ArXiv</button> -->
-                        <button class = "styled-button" onclick="window.open('https://arxiv.org/abs/2411.03851', '_blank');">ArXiv</button>
-                </div>
+        <section id="current-experience">
+            <h2>Recent Internship</h2>
 
-                <div class="outer-div2">
-                    
-                    <h3>On the algorithmic construction of control Lyapunov functions for continuous control systems</h3>
-                    <p><strong>Aditya Gupta</strong>, Souvik Das, and Debasish Chatterjee</p>
-                    <! -- <button class = "styled-button">ArXiv</button> -->
-                    <p>Links to be added</p>
-                </div>
-
-                <div class="outer-div2">
-                    
-                    <h3>DrugProtAI: A guide to the future research of investigational target proteins</h3>
-                    <p>Ankit Halder*, Sabyasachi Samantarey, Sahil Barbade, <strong>Aditya Gupta</strong>, and Sanjeeva Srivastava</p>
-                    <button class = "styled-button" onclick="window.open('https://www.biorxiv.org/content/10.1101/2024.11.05.622045v1', '_blank');">BioArXiv</button>
-                    <! -- <button class = "styled-button">BioArXiv</button> -->
-                    
-                    
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/c3ai.jpg" alt="C3.ai"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">C3.ai &mdash; Machine Learning Internship</span>
+                        <span class="timeline-date">May 2026 &ndash; Aug 2026</span>
+                    </div>
+                    <ul>
+                        <li>Built a template layer for C3 Code, developing skills and context for zero-shot agentic app generation</li>
+                        <li>Designed generalizable optimization workflows spanning MILP, convex, and nonlinear problem formulations</li>
+                        <li>Architected self-improving iteration loops that robustly benchmarked generated applications against test cases</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="inte" id="int"> <!-- Publications Section -->
-            <h2>Internships</h2>
-            <div class = "par-div">
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/amex.jpg" alt="Landscape" class="landscape-img">
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">New York University &mdash; MS, Computer Engineering</span>
+                        <span class="timeline-date">Aug 2025 &ndash; Present</span>
                     </div>
-                    <div class="inner-div right-div">
-                        <h2>American Express</h2>
-                        <h3>Machine Learning Internship</h3>
-                        <h4>May 2023 - July 2023</h4>
-                        <p>I worked with the Credit and Fraud Risk (CFR) division at American Express India on Market Mix modelling (MMM). My work involved developing novel mathematical functions to tune hyperparameters using global optimization routines for over 120 variables. I created a cutom pipeline utilizing a combination of S-Curve and C-Curve transformation in order to achieve optimal results.</p>
-                    </div>
+                    <div class="timeline-subtitle">GPA: 4.0/4.0</div>
+                    <p>Coursework: Machine Learning, Computer Vision, Reinforcement Learning, Image Processing, High Performance Machine Learning</p>
                 </div>
+            </div>
 
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/obs.jpg" alt="Landscape" class="landscape-img">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Indian Institute of Technology (IIT) Bombay &mdash; BTech, Mechanical Engineering &amp; Minor, CSE</span>
+                        <span class="timeline-date">Nov 2020 &ndash; May 2024</span>
                     </div>
-                    <div class="inner-div right-div">
-                        <h2>Opulence Business Solutions</h2>
-                        <h3>Financial Analytics Internship</h3>
-                        <h4>May 2022 - July 2022</h4>
-                        <p>
-                            I conducted research and synthesized data to provide strategic insights and recommendations for a diverse range of clients. My work involved advising investors on funding opportunities for potential startups and MSMEs, while also facilitating the establishment of business relationships between enterprises and global investors. This allowed me to offer valuable recommendations that bridged gaps between businesses and investors on a global scale.</p>
+                    <div class="timeline-subtitle">GPA: 9.09/10</div>
+                    <p>Coursework: Data Structures &amp; Algorithms, Linear Algebra, Discrete Mathematics, Statistics, Stochastic Processes</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Past Experience</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/mercedes.jpg" alt="Mercedes-Benz"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Mercedes-Benz &mdash; Software Development Engineer</span>
+                        <span class="timeline-date">Oct 2024 &ndash; July 2025</span>
+                    </div>
+                    <ul>
+                        <li>Managed the Mercedes Connected Cars platform with 100+ remote commands and 10+ Java services on Kubernetes</li>
+                        <li>Built a RAG-powered Mistral-7B AWS platform with automated CI/CD workflows, reducing overhead by 50%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/amex.jpg" alt="American Express"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">American Express &mdash; Machine Learning Internship</span>
+                        <span class="timeline-date">May 2023 &ndash; July 2023</span>
+                    </div>
+                    <ul>
+                        <li>Built an OLS-based hyperparameter tuning framework for Market Mix Modeling using Dual Annealing and Bayesian optimization</li>
+                        <li>Improved performance across 12 KPIs by 150% and increased convergence stability by 35% with a C-curve strategy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/opulence.jpg" alt="Opulence Business Solutions"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Opulence Business Solutions &mdash; Financial Analytics Internship</span>
+                        <span class="timeline-date">May 2022 &ndash; July 2022</span>
+                    </div>
+                    <p>Conducted research and synthesized data to provide strategic insights and recommendations for a diverse range of clients, advising investors on funding opportunities for startups and MSMEs while facilitating business relationships between enterprises and global investors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research-projects">
+            <h2>Research Projects</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title"><a href="https://github.com/Aditya-Gupta26/Efficient-Distillation">Monocular Depth Estimation using Efficient Knowledge Distillation</a></span>
+                        <span class="timeline-date">Jan 2026 &ndash; May 2026</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. Zehra Sura &bull; Course Project</div>
+                    <ul>
+                        <li>Designed a white-box distillation pipeline to compress Swin Transformers (197M to 28M parameters) using ImageNet-1k</li>
+                        <li>Applied post-training quantization and LoRA fine-tuning for monocular depth estimation, surpassing Intel's benchmark model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Carbon-Free Energy Systems Optimization</span>
+                        <span class="timeline-date">Sept 2025 &ndash; Aug 2026</span>
+                    </div>
+                    <div class="timeline-subtitle">SET Lab &bull; Advisor: Prof. <a href="https://engineering.nyu.edu/faculty/dharik-mallapragada">Dharik Mallapragada</a> &bull; Research Project</div>
+                    <ul>
+                        <li>Built a 7-zone Capacity Expansion Model in Gurobi for renewable energy and policy planning, and REC market elasticity analysis</li>
+                        <li>Scaled optimization to 100+ zones using a decentralized ADMM-based distributed optimization framework</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Neural Speech Decoding with Transformer-based Classification</span>
+                        <span class="timeline-date">Sept 2025 &ndash; Dec 2025</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://engineering.nyu.edu/faculty/yao-wang">Yao Wang</a> &bull; Course Project</div>
+                    <ul>
+                        <li>Developed a neural speech decoder by implementing a Swin Transformer architecture over input ECoG signals</li>
+                        <li>Implemented a contrastive-learning-based self-supervised pretraining pipeline for efficient spatio-temporal alignment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Prior Research &amp; Projects</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/drugprotai.png" alt="DrugProtAI"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">DrugProtAI: Protein Druggability Predictor</span>
+                        <span class="timeline-date">July 2024 &ndash; Oct 2024</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://scholar.google.co.in/citations?user=CUzQFQQAAAAJ&hl=en">Sanjeeva Srivastava</a> &bull; Department of Biosciences and Bioengineering, IIT Bombay</div>
+                    <p>Built a knowledgebase of 20,000+ human proteins using a novel Partition Ensemble Classifier (XGBoost + Random Forest) analyzing 183 biophysical and sequence-specific properties. The <a href="https://drugprotai.pythonanywhere.com/">website</a> offers druggability predictions and access to 2M+ publications on drug targets. Authored a research paper accepted in the peer-reviewed journal Briefings in Bioinformatics (Oxford Academic).</p>
+                    <div class="timeline-links">
+                        <a href="https://doi.org/10.1093/bib/bbaf330">Paper</a>
+                        <a href="https://www.biorxiv.org/content/10.1101/2024.11.05.622045v1">Preprint</a>
+                        <a href="https://drugprotai.pythonanywhere.com/">Website</a>
                     </div>
                 </div>
             </div>
-            
-        </div>
 
-        <div class="proj" id="pro"> <!-- Projects Section -->
-            <div class = "par-div">
-                <h2> Projects</h2>
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/rt.jpeg" alt="Landscape" class="landscape-img">
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/swiftnav.png" alt="SwiftNav"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">SwiftNav: A Probabilistic Global Optimizer</span>
+                        <span class="timeline-date">Jan 2024 &ndash; Sept 2024</span>
                     </div>
-                    <div class="inner-div right-div">
-                        <h2>Adyant: IITB Rocket Team</h2>
-                        <h3><a href = "https://www.me.iitb.ac.in/faculty/prof-neeraj-kumbhakarna" style="color: yellow; text-decoration: none;">Prof. Neeraj Kumbhaarna</a> | Department of Mechanical Engineering, IIT Bombay</h3>
-                        <h3><a href = "https://www.aero.iitb.ac.in/home/people/faculty/nagendra" style="color: yellow; text-decoration: none;">Prof. Nagendra Kumar</a> | Department of Aerospace Engineering, IIT Bombay</h3>
-                        <h4>June 2021 - May 2024</h4>
-                        <p>Worked as a design engineer in the airframe subsystem of a student tech team that builds sounding rockets (10k feet). We ideated, conceptualized and manufactured rocket parts made of GFRP, Carbon-Fibre and ran several tests using ANSYS, SolidWorks simulating flight performance. I also worked in the design and creation of the team's website. I was selected as part of <a href = "https://iitbrocketteam.in/" style="color: yellow; text-decoration: none;">IITB Rocket Team's</a> first contingent representing India at the <a href = "https://spaceportamericacup.com/" style="color: yellow; text-decoration: none;">Spaceport America Cup 2023</a>(SA Cup | NM, USA). Our Rocket - Adyant achieved nominal liftoff, chute ejection and recovery which helped us bag 1st position nationally and 66th position internationally out of 150+ teams in the competition.  </p>
-                        
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html">Debasish Chatterjee</a> &bull; Department of Systems and Control Engineering, IIT Bombay</div>
+                    <p>Designed a novel global optimization algorithm based on probabilistic Markov-chain Monte Carlo (Walker-Slice / Gibbs) sampling, scaling to 1,000+ dimensions with dynamic grid refinement and parallel processing, achieving up to 10&times; faster convergence in high dimensions.</p>
+                    <div class="timeline-links">
+                        <a href="https://arxiv.org/abs/2411.03851">Paper</a>
                     </div>
                 </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/travopt.JPG" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>Optimization of Public Transport Selection</h2>
-                        <h3><a href = "https://www.ieor.iitb.ac.in/files/faculty/abhardwaj/index.html#" style="color: yellow; text-decoration: none;">Prof. Avinash Bhardwaj</a> | Department of Industrial and Operations Research, IIT Bombay</h3>
-                        <h4>January 2023 - May 2023</h4>
-                        <p>We aimed at optimizing travel in a tranposrtation network consisting of multiple means of transport. We analyzed the city of Mumbai and developed algorithms to optimize travel based on user choice (time efficient, cost efficient, comfort etc.) with 4 transport modes (Metro, Local trains, Bus service, Rickshaws). We employed linear programming for a deterministic case. Later, we added a stochastic model based on Reinforcement Learning and reformulated the problem as an MDP. Lastly, we used NSGA-II genetic algorithm to solve the optimal route problem.</p>
-                        <button class="styled-button" onclick="window.open('https://drive.google.com/file/d/1EVFKHjt9yr1wmeOcsbGK2ySje0c7orKv/view?usp=sharing', '_blank');">
-                            Presentation
-                        </button>
-                    </div>
-                </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/dh.JPG" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>Segmentation of Abdominal Organs</h2>
-                        <h3><a href = "https://www.cse.iitb.ac.in/~ganesh/" style="color: yellow; text-decoration: none;">Prof. Ganesh Ramakrishnan</a> | Department of Computer Science and Engineering, IIT Bombay</h3>
-                        <h3><a href = "https://www.koitafoundation.org/DHFC/Viewtext/34A85889-49C3-419F-9217-87A0C8B02637" style="color: yellow; text-decoration: none;">Prof. Kshitij Jafhav</a> | Koita Centre for Digital Health, IIT Bombay</h3>
-                        <h4>January 2024 - May 2024</h4>
-                        <p>We implemented Meta's Segment Anything Model (<a href = "https://segment-anything.com/" style="color: yellow; text-decoration: none;">SAM</a>) -- modified to segment medical images (SAMed) with LORA loss function. For this purpose, I trained the model on <a href = "https://paperswithcode.com/dataset/chaos" style="color: yellow; text-decoration: none;">CHAOS</a> dataset containing CT scan based 3D DICOM images and applied multiple pre-processing routines to establish compatibility, obtaining nomial results for Liver, Kidney (left and right) and spleen segmentation.</p>
-                        <button class="styled-button" onclick="window.open('https://drive.google.com/file/d/1T4DlvhQNUr9qo22DDy9ocDdbYeKijFY0/view?usp=sharing','_blank');">
-                            Report
-                        </button>
-                    </div>
-                </div>
-
-                <div class="outer-div">
-                    <div class="inner-div left-div">
-                        <img src="static/macdes.jpg" alt="Landscape" class="landscape-img">
-                    </div>
-                    <div class="inner-div right-div">
-                        <h2>Flexibile and Extendable 2D Manipulator</h2>
-                        <h3><a href = "https://www.me.iitb.ac.in/~ramesh/" style="color: yellow; text-decoration: none;">Prof. Ramesh Singh</a> | Department of Mechanical Engineering, IIT Bombay</h3>
-                        <h4>September 2023 - Decemeber 2023</h4>
-                        <p>We built a near-continuum soft robotic arm designed to bend at various radii of curvature along its length, offering adaptability to navigate complex scenarios. It can be used for maintenance, in healthcare and for search and rescue. We also developed a wireless remote working on Wi-Fi principle to control the essential robotic arm movements wirelessly. </p>
-                        <button class="styled-button" onclick="window.open('https://drive.google.com/file/d/187WlPqSt6weud_iZdxys4yK8IgA5XXq5/view?usp=sharing','_blank');">
-                            Report
-                        </button>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-        <div class="ceevee" id="cv"> <!-- CV Section -->
-            <h2>CV</h2>
-            <object data="static/CV_With_School-6.pdf" type="application/pdf" width="100%" height="600px">
-                <p>Your browser does not support PDFs. <a href="static/CV.pdf">Download the PDF</a>.</p>
-            </object>
-        </div>
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/clf.png" alt="Controlled Lyapunov Functions"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Algorithmic Construction of Controlled Lyapunov Functions (CLF)</span>
+                        <span class="timeline-date">2024</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://www.sc.iitb.ac.in/~chatterjee/master/homepage/index.html">Debasish Chatterjee</a> &bull; Department of Systems and Control Engineering, IIT Bombay</div>
+                    <p>Used a computationally tractable algorithm (MSA), coupled with SwiftNav, to algorithmically construct CLFs &mdash; a centerpiece of control engineering with applications spanning spacecraft attitude control, epidemic mitigation, catalyst control, and biochemical reactions. Polynomial and trigonometric candidate functions were validated against the specified constraints.</p>
+                </div>
+            </div>
 
-        
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/covprot.jpg" alt="CovProt"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">CovProt: Mass Spectrometry-based Proteomics Data Resource</span>
+                        <span class="timeline-date">2024</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://scholar.google.co.in/citations?user=CUzQFQQAAAAJ&hl=en">Sanjeeva Srivastava</a> &bull; Department of Biosciences and Bioengineering, IIT Bombay</div>
+                    <p>Part of the team that developed a comprehensive resource bank hosting proteomics data of SARS-CoV-2 infected patients to facilitate COVID-19 research, studying protein variation across organs. The <a href="https://covprot.org/">website</a> provides substantial coverage of host-related proteomics data of SARS-CoV-2.</p>
+                    <div class="timeline-links">
+                        <a href="https://covprot.org/">Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/sphere.jpg" alt="Sphere Packing"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Optimal Sphere Packing in Higher Dimensions</span>
+                        <span class="timeline-date">2023 &ndash; 2024</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://www.ieor.iitb.ac.in/files/faculty/abhardwaj/index.html">Avinash Bhardwaj</a> &bull; Department of Industrial Engineering and Operations Research, IIT Bombay &bull; B.Tech Project</div>
+                    <p>Researched mathematical models formulating spheres as d-dimensional lattices to maximize packing density, examining the Monte-Carlo approach alongside the <a href="https://arxiv.org/abs/1008.2747">TJ</a> and <a href="https://en.wikipedia.org/wiki/Lubachevsky%E2%80%93Stillinger_algorithm">Lubachevsky-Stillinger</a> algorithms &mdash; a problem of interest in cryptosystems and computational mathematics.</p>
+                    <div class="timeline-links">
+                        <a href="https://docs.google.com/presentation/d/1NKdkOeSVIsvDtxAWK47U6K-9n5tbyjFA/edit?usp=sharing&ouid=110385763100095062741&rtpof=true&sd=true">Presentation</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/rocket.jpeg" alt="Adyant Rocket"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Adyant: IITB Rocket Team</span>
+                        <span class="timeline-date">June 2021 &ndash; May 2024</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisors: Prof. <a href="https://www.me.iitb.ac.in/faculty/prof-neeraj-kumbhakarna">Neeraj Kumbhakarna</a> &amp; Prof. <a href="https://www.aero.iitb.ac.in/home/people/faculty/nagendra">Nagendra Kumar</a> &bull; IIT Bombay</div>
+                    <p>Design engineer in the airframe subsystem of a student team building sounding rockets (10k ft). Ideated, conceptualized, and manufactured GFRP and carbon-fibre rocket parts, running flight-performance simulations in ANSYS and SolidWorks. Selected as part of <a href="https://iitbrocketteam.in/">IITB Rocket Team's</a> first contingent representing India at the <a href="https://spaceportamericacup.com/">Spaceport America Cup 2023</a> (NM, USA); our rocket, Adyant, achieved nominal liftoff, chute ejection, and recovery, placing 1st nationally and 66th internationally out of 150+ teams.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/transport.jpg" alt="Public Transport Optimization"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Optimization of Public Transport Selection</span>
+                        <span class="timeline-date">Jan 2023 &ndash; May 2023</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://www.ieor.iitb.ac.in/files/faculty/abhardwaj/index.html">Avinash Bhardwaj</a> &bull; Department of Industrial Engineering and Operations Research, IIT Bombay</div>
+                    <p>Optimized multi-modal travel across the city of Mumbai (metro, local trains, buses, rickshaws) for user-chosen objectives (time, cost, comfort) using linear programming for the deterministic case, a Reinforcement Learning / MDP reformulation for the stochastic case, and the NSGA-II genetic algorithm for the optimal route problem.</p>
+                    <div class="timeline-links">
+                        <a href="https://drive.google.com/file/d/1EVFKHjt9yr1wmeOcsbGK2ySje0c7orKv/view?usp=sharing">Presentation</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/segmentation.jpg" alt="Abdominal Organ Segmentation"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Segmentation of Abdominal Organs</span>
+                        <span class="timeline-date">Jan 2024 &ndash; May 2024</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisors: Prof. <a href="https://www.cse.iitb.ac.in/~ganesh/">Ganesh Ramakrishnan</a> &amp; Prof. <a href="https://www.koitafoundation.org/DHFC/Viewtext/34A85889-49C3-419F-9217-87A0C8B02637">Kshitij Jadhav</a> &bull; Koita Centre for Digital Health, IIT Bombay</div>
+                    <p>Implemented Meta's <a href="https://segment-anything.com/">Segment Anything Model</a>, modified with a LoRA loss function (SAMed), for medical image segmentation. Trained on the <a href="https://paperswithcode.com/dataset/chaos">CHAOS</a> dataset of CT-scan-based 3D DICOM images with custom preprocessing routines, obtaining solid results for liver, kidney (left/right), and spleen segmentation.</p>
+                    <div class="timeline-links">
+                        <a href="https://drive.google.com/file/d/1T4DlvhQNUr9qo22DDy9ocDdbYeKijFY0/view?usp=sharing">Report</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-thumb"><img src="images/softarm.jpg" alt="Soft Robotic Arm"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <span class="timeline-title">Flexible and Extendable 2D Manipulator</span>
+                        <span class="timeline-date">Sept 2023 &ndash; Dec 2023</span>
+                    </div>
+                    <div class="timeline-subtitle">Advisor: Prof. <a href="https://www.me.iitb.ac.in/~ramesh/">Ramesh Singh</a> &bull; Department of Mechanical Engineering, IIT Bombay</div>
+                    <p>Built a near-continuum soft robotic arm able to bend at various radii of curvature along its length for maintenance, healthcare, and search-and-rescue use cases, with a Wi-Fi-based wireless remote for control.</p>
+                    <div class="timeline-links">
+                        <a href="https://drive.google.com/file/d/187WlPqSt6weud_iZdxys4yK8IgA5XXq5/view?usp=sharing">Report</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <div class="publications-header">
+                <h2 id="toggle-header">Selected Publications</h2>
+                <button id="toggle-publications" class="toggle-publications">Show All</button>
+            </div>
+            <div id="publications-container">
+                <!-- Publications will be dynamically loaded here -->
+            </div>
+        </section>
     </main>
 
-
-    <!-- Footer Section -->
     <footer>
-        <a href="https://www.linkedin.com/in/aditya-gupta-332706221/" target="_blank" style = "text-decoration: none;">
-            <img src="static/linkedin-logo.png" alt="LinkedIn" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
-        </a>
-        <a href="https://github.com/Aditya-Gupta26" target="_blank" style = "text-decoration: none;">
-            <img src="static/github-logo.png" alt="GitHub" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
-        </a>
-        <a href="mailto:adigupta2602@gmail.com" target="_blank" style = "text-decoration: none;">
-            <img src="static/mail-logo.png" alt="Gmail" style="width: 37.2px; margin: 0 5px; border-radius: 15px;">
-        </a>
+        <p>Last updated: August 2026. Design and source code adapted from <a href="https://cs.stanford.edu/~yuhuiz/">Yuhui Zhang's website</a>.</p>
     </footer>
-    
-    <script src="static/script.js"></script>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
