@@ -10,18 +10,8 @@
   --transition-time: 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-color: #14161a;
-    --text-color: #e2e8f0;
-    --text-secondary: #a0aec0;
-    --accent-color: #7ea3e0;
-    --accent-hover: #9cb9ea;
-    --border-color: #2d3339;
-    --shadow-color: rgba(0,0,0,0.4);
-  }
-}
-
+/* Light mode is the default regardless of OS preference; dark mode
+   only applies when explicitly toggled (data-theme="dark"). */
 :root[data-theme="dark"] {
   --bg-color: #14161a;
   --text-color: #e2e8f0;

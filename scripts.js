@@ -32,10 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function isDarkTheme() {
-  const stored = document.documentElement.getAttribute('data-theme');
-  if (stored === 'dark') return true;
-  if (stored === 'light') return false;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // Light is the default regardless of OS preference; dark only
+  // applies once the user explicitly toggles it.
+  return document.documentElement.getAttribute('data-theme') === 'dark';
 }
 
 function toggleTheme() {
