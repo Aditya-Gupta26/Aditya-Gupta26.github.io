@@ -1,7 +1,3 @@
-// Global variables
-let allPublications = [];
-let showingSelected = true;
-
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
   // Load publications data
@@ -13,15 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
     section.style.animationDelay = `${index * 0.1}s`;
   });
 
-  // Add event listener for toggle button
-  const toggleButton = document.getElementById('toggle-publications');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', togglePublications);
-  }
-
   // Wire up any timeline thumbnails to the image modal
   document.querySelectorAll('.timeline-thumb img').forEach(img => {
     img.parentElement.addEventListener('click', () => openModal(img.src));
+  });
+
+  // Collapsible sections: click the heading to expand/collapse
+  document.querySelectorAll('.collapsible > h2').forEach(h2 => {
+    h2.addEventListener('click', () => {
+      const content = h2.nextElementSibling;
+      content.hidden = !content.hidden;
+      h2.classList.toggle('expanded', !content.hidden);
+    });
   });
 });
 
@@ -35,8 +34,7 @@ function loadPublications() {
       return response.json();
     })
     .then(data => {
-      allPublications = data.publications;
-      renderPublications(true);
+      renderPublications(data.publications);
     })
     .catch(error => {
       console.error('Error loading publications:', error);
@@ -50,27 +48,12 @@ function displayFallbackPublications() {
   container.innerHTML = `Error loading publications.`;
 }
 
-// Toggle between showing all or selected publications
-function togglePublications() {
-  showingSelected = !showingSelected;
-  renderPublications(showingSelected);
-
-  const toggleButton = document.getElementById('toggle-publications');
-  toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
-  const toggleHeader = document.getElementById('toggle-header');
-  toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
-}
-
-// Render publications based on selection state
-function renderPublications(selectedOnly) {
+// Render the full publications list
+function renderPublications(publications) {
   const publicationsContainer = document.getElementById('publications-container');
   publicationsContainer.innerHTML = '';
 
-  const pubsToShow = selectedOnly ?
-    allPublications.filter(pub => pub.selected === 1) :
-    allPublications;
-
-  pubsToShow.forEach(publication => {
+  publications.forEach(publication => {
     const pubElement = createPublicationElement(publication);
     publicationsContainer.appendChild(pubElement);
   });

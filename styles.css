@@ -64,6 +64,33 @@ h2 {
   letter-spacing: -0.01em;
 }
 
+/* Collapsible sections: click the heading to expand/collapse */
+.collapsible > h2 {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color var(--transition-time) ease;
+}
+
+.collapsible > h2:hover {
+  color: var(--accent-color);
+}
+
+.collapsible > h2::after {
+  content: '+';
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.collapsible > h2.expanded::after {
+  content: '\2212';
+}
+
 /* Navigation */
 nav {
   margin-top: 1.5rem;
@@ -135,29 +162,6 @@ section {
 }
 
 /* Publication styles */
-.publications-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.toggle-publications {
-  background-color: rgba(74, 116, 185, 0.08);
-  color: var(--accent-color);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all var(--transition-time) ease;
-}
-
-.toggle-publications:hover {
-  background-color: var(--accent-color);
-  color: white;
-}
-
 .publication-item {
   margin-bottom: 1.5rem;
   padding: 0.75rem 0;
