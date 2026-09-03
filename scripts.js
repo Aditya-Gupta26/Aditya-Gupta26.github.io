@@ -22,7 +22,38 @@ document.addEventListener('DOMContentLoaded', function() {
       h2.classList.toggle('expanded', !content.hidden);
     });
   });
+
+  // Dark mode toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    updateThemeIcon();
+    themeToggle.addEventListener('click', toggleTheme);
+  }
 });
+
+function isDarkTheme() {
+  const stored = document.documentElement.getAttribute('data-theme');
+  if (stored === 'dark') return true;
+  if (stored === 'light') return false;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+function toggleTheme() {
+  const next = isDarkTheme() ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try {
+    localStorage.setItem('theme', next);
+  } catch (e) {}
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  const themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
+  themeToggle.innerHTML = isDarkTheme()
+    ? '<i class="fas fa-sun"></i>'
+    : '<i class="fas fa-moon"></i>';
+}
 
 // Load publications from JSON file
 function loadPublications() {
